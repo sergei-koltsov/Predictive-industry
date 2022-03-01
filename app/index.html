@@ -1,14 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  
-  <script src="js/main.js"></script>
-</body>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__logo">
+            <img class="header__logo-img" src="images/ico/logo-ico.svg" alt="logo-ico">
+          </div>
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="__home.html" class="header__menu-link">Home</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="__about.html" class="header__menu-link">About</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="__services.html" class="header__menu-link">Services</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="__blog.html" class="header__menu-link">Blog</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="__contacts.html" class="header__menu-link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+
+          <button class="header__contact-btn" type="button">
+            (049) 8331 9903
+          </button>
+          
+          <div class="header__contact-block">
+            <div class="header__contact-phone">
+              <a href="tel:04983319903" class="header__phone">
+                (049) 8331 9903
+              </a>
+            </div>
+            <div class="header__contact-mail">
+              <a href="mail:mydesign@gmail.com" class="header__phone">
+                (049) 8331 9903
+              </a>
+            </div>
+            <div class="header__contact-map">
+              <a href="#" class="header__map">
+                Omnis iste natus error sit
+              </a>
+            </div>
+            <div class="header__contact-social">
+              <a href="#" class="header__phone">Whatsapp</a>
+              <a href="#" class="header__phone">Instagram</a>
+            </div>
+          </div>
+          
+          <button class="header__lang-btn">
+            <img class="header__lang-img" src="" alt="lang-ico">
+          </button>
+
+          <div class="header__lang-block">
+            <a class="header__lang-item" href="#">De</a>
+            <a class="header__lang-item header__lang-item--active" href="#">En</a>
+            <a class="header__lang-item" href="#">Ru</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="top__slider">
+      <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
+        <div class="parallax-bg" style="
+          background-image: url(https://swiperjs.com/demos/images/nature-1.jpg);
+        " data-swiper-parallax="-23%"></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">Slide 1</div>
+            <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+            <div class="text" data-swiper-parallax="-100">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">Slide 2</div>
+            <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+            <div class="text" data-swiper-parallax="-100">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">Slide 3</div>
+            <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+            <div class="text" data-swiper-parallax="-100">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+
 </html>

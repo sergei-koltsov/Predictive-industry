@@ -1,0 +1,101 @@
+@import 'fonts';
+@import 'vars';
+@import 'global';
+@import 'libs';
+
+.header {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding: 22px 0 25px;
+  }
+
+  &__menu {
+    margin-left: 67px;
+    &-list {
+      display: flex;
+      align-items: center;
+    }
+
+    &-item {
+      &:hover {
+        border-bottom: 2px solid #DB5B46;
+      }
+      
+      &+&{
+        margin-left: 23px;
+      }
+    }
+  }
+
+  &__contact {
+
+
+    &-block {
+      display: none;
+    }
+  }
+
+  &__lang {
+
+
+    &-block {
+      display: none;
+    }
+  }
+}
+
+.top__slider{
+  min-height: 100vh;
+  position: relative;
+}
+
+.swiper {
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 60px;
+}
+
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide .title {
+  font-size: 41px;
+  font-weight: 300;
+}
+
+.swiper-slide .subtitle {
+  font-size: 21px;
+}
+
+.swiper-slide .text {
+  font-size: 14px;
+  max-width: 400px;
+  line-height: 1.3;
+}
+
+
+
+@import 'media';

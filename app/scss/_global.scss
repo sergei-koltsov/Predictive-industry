@@ -58,9 +58,13 @@ select {
   font: inherit;
 }
 
-.container {
-  width: 100%;
-  max-width: 1230px;
-  margin: 0 auto;
+body{
+  background-color: #000;
+  color: $primary-color;
+}
+
+.container{
+  max-width: 1145px;
   padding: 0 15px;
+  margin: 0 auto;
 }
