@@ -58,13 +58,48 @@ select {
   font: inherit;
 }
 
-body{
-  background-color: #000;
+body {
   color: $primary-color;
 }
 
-.container{
+.container {
+  width: 100%;
   max-width: 1145px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: $primary-color;
+  box-shadow: 3px 5px 15px rgba(76, 102, 240, 0.2);
+}
+
+.btn-fill {
+  padding: 15px 35px;
+  background: rgba(27, 75, 249, 0.9);
+
+  &:hover {
+    background: rgba(24, 68, 225, 0.9);
+  }
+
+  &:active {
+    background: rgba(20, 61, 209, 0.9);
+  }
+}
+
+.btn-trans {
+  padding: 15px 35px;
+  background: rgba(27, 75, 249, 0.15);
+  border: 1px solid #1B4BF9;
+
+  &:hover {
+    background: rgba(27, 75, 249, 0.2);
+  }
+
+  &:active {
+    background: rgba(27, 75, 249, 0.27);
+  }
 }

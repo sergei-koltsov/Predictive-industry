@@ -63,6 +63,13 @@
 }
 @font-face {
   font-family: "Urbanist";
+  font-style: italic;
+  font-weight: 600;
+  src: url("../fonts/Urbanist-SemiBoldItalic.eot");
+  src: local(""), url("../fonts/Urbanist-SemiBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Urbanist-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Urbanist-SemiBoldItalic.woff") format("woff"), url("../fonts/Urbanist-SemiBoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Urbanist";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/Urbanist-Bold.eot");
@@ -118,14 +125,49 @@ input, button, textarea, select {
 }
 
 body {
-  background-color: #000;
   color: #fff;
 }
 
 .container {
+  width: 100%;
   max-width: 1145px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  box-shadow: 3px 5px 15px rgba(76, 102, 240, 0.2);
+}
+
+.btn-fill {
+  padding: 15px 35px;
+  background: rgba(27, 75, 249, 0.9);
+}
+
+.btn-fill:hover {
+  background: rgba(24, 68, 225, 0.9);
+}
+
+.btn-fill:active {
+  background: rgba(20, 61, 209, 0.9);
+}
+
+.btn-trans {
+  padding: 15px 35px;
+  background: rgba(27, 75, 249, 0.15);
+  border: 1px solid #1b4bf9;
+}
+
+.btn-trans:hover {
+  background: rgba(27, 75, 249, 0.2);
+}
+
+.btn-trans:active {
+  background: rgba(27, 75, 249, 0.27);
 }
 
 @font-face {
@@ -791,6 +833,7 @@ button.swiper-pagination-bullet {
 
 .header__inner {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 22px 0 25px;
 }
@@ -804,16 +847,95 @@ button.swiper-pagination-bullet {
   align-items: center;
 }
 
-.header__menu-item:hover {
-  border-bottom: 2px solid #db5b46;
+.header__menu-item {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  position: relative;
+}
+
+.header__menu-item a {
+  color: #fff;
 }
 
 .header__menu-item + .header__menu-item {
   margin-left: 23px;
 }
 
+.header__menu-item:hover a {
+  color: #db5b46;
+  position: relative;
+}
+
+.header__menu-item:hover a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -43px;
+  width: 100%;
+  border-bottom: 2px solid #db5b46;
+}
+
+.header__menu-item--active a {
+  color: #db5b46;
+  position: relative;
+}
+
+.header__menu-item--active a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -43px;
+  width: 100%;
+  border-bottom: 2px solid #db5b46;
+}
+
+.header__user {
+  display: flex;
+}
+
+.header__contact {
+  position: relative;
+}
+
+.header__contact-btn {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20.88px;
+  letter-spacing: 0.03em;
+  padding: 15px 22.5px 14px;
+  display: flex;
+  flex-direction: row;
+}
+
+.header__contact-btn P {
+  margin-left: 6px;
+}
+
 .header__contact-block {
-  display: none;
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+  border: 1px solid #1b4bf9;
+}
+
+.header__contact-block::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(6px);
+  background: rgba(27, 75, 249, 0.25);
+}
+
+.header__lang-btn {
+  padding: 15px;
+  margin-left: 10px;
 }
 
 .header__lang-block {
@@ -825,41 +947,129 @@ button.swiper-pagination-bullet {
   position: relative;
 }
 
+.top__slider-one, .top__slider-two, .top__slider-three {
+  background-image: url(../images/slider-one.jpg);
+}
+
+.top__slider-two {
+  background-image: url(../images/slider-two.jpg);
+}
+
+.top__slider-three {
+  background-image: url(../images/slider-three.jpg);
+}
+
+.top__slider-inner {
+  position: absolute;
+  z-index: 11;
+  top: 25%;
+}
+
+.top__slider-title {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 65px;
+  line-height: 74.1px;
+  letter-spacing: -0.01em;
+  max-width: 858px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.top__slider-title span {
+  font-family: "Urbanist", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 65px;
+  line-height: 74.1px;
+  letter-spacing: -0.01em;
+}
+
+.top__slider-text {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28.62px;
+  letter-spacing: 0.02em;
+  max-width: 490px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.top__slider-btn-group {
+  display: flex;
+}
+
+.top__slider-btn + .top__slider-btn {
+  margin-left: 25px;
+}
+
 .swiper {
-  min-height: 100vh;
   width: 100%;
   height: 100%;
-  background: #000;
+  min-height: 100vh;
 }
 
 .swiper-slide {
-  font-size: 18px;
-  color: #fff;
-  box-sizing: border-box;
-  padding: 40px 60px;
-}
-
-.parallax-bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 130%;
-  height: 100%;
+  background-position: center top;
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
 }
 
-.swiper-slide .title {
-  font-size: 41px;
-  font-weight: 300;
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(103.14deg, rgba(0, 0, 0, 0.72) 40.7%, rgba(0, 0, 0, 0) 94.13%);
 }
 
-.swiper-slide .subtitle {
-  font-size: 21px;
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.swiper-slide .text {
-  font-size: 14px;
-  max-width: 400px;
-  line-height: 1.3;
+.swiper-pagination {
+  text-align: left;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 50px;
+  left: auto;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid #fff;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet + .swiper-pagination-bullet {
+  margin-left: 28px !important;
+}
+
+.swiper-pagination-bullet + .swiper-pagination-bullet::before {
+  content: "";
+  position: absolute;
+  left: -19px;
+  top: 50%;
+  width: 10px;
+  height: 1px;
+  background-color: #fff !important;
 }

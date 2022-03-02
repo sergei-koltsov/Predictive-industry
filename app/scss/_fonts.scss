@@ -108,6 +108,18 @@
 
 @font-face {
   font-family: 'Urbanist';
+  font-style: italic;
+  font-weight: 600;
+  src: url('../fonts/Urbanist-SemiBoldItalic.eot');
+  src: local(''),
+    url('../fonts/Urbanist-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Urbanist-SemiBoldItalic.woff2') format('woff2'),
+    url('../fonts/Urbanist-SemiBoldItalic.woff') format('woff'),
+    url('../fonts/Urbanist-SemiBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Urbanist';
   font-style: normal;
   font-weight: 700;
   src: url('../fonts/Urbanist-Bold.eot');
