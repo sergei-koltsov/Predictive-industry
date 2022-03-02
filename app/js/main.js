@@ -1,4 +1,4 @@
-let swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
@@ -36,6 +36,24 @@ langChange.forEach((change) => {
   })
 });
 
-$(document).ready(function () {
-  let mixer = mixitup('.services__content');
+const filterMix = document.querySelectorAll('.mix');
+const filterBtn = document.querySelectorAll('.services__info-title');
+document.querySelector('.services__info-filter').addEventListener('click', (event) => {
+
+  if (event.target.tagName !== 'H3') return false;
+  let filterClass = event.target.dataset['f'];
+
+  filterMix.forEach(elem => {
+    filterBtn.forEach(btn => {
+      btn.classList.add('services__info-title--active');
+    })
+    elem.classList.remove('hide');
+    if (!elem.classList.contains(filterClass)) {
+      filterBtn.forEach(btn => {
+        btn.classList.remove('services__info-title--active');
+      })
+      elem.classList.add('hide');
+    }
+  });
+
 });

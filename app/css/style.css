@@ -1253,6 +1253,11 @@ button.swiper-pagination-bullet {
   padding: 130px 0;
 }
 
+.services__content {
+  display: flex;
+  justify-content: space-between;
+}
+
 .services__info-filter {
   display: flex;
   margin-bottom: 40px;
@@ -1265,12 +1270,48 @@ button.swiper-pagination-bullet {
   font-size: 22px;
   line-height: 28.36px;
   letter-spacing: -0.01em;
-  background-color: transparent;
-  border: none;
   color: #000;
-  box-shadow: none;
+  cursor: pointer;
 }
 
 .services__info-title + .services__info-title {
   margin-left: 74px;
+}
+
+.services__info-title:hover {
+  color: #db5b46;
+  border-bottom: 2px solid #db5b46;
+}
+
+.services__info-list {
+  max-width: 540px;
+  width: 100%;
+  margin-bottom: 35px !important;
+}
+
+.services__info-item {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28.62px;
+  letter-spacing: 0.02em;
+}
+
+.services__info-item + .services__info-item {
+  margin-top: 20px;
+}
+
+.services__info-title--active {
+  font-weight: 800;
+  color: #000;
+  border-bottom: 2px solid #db5b46;
+}
+
+.services__info-title--active span {
+  color: #db5b46;
+}
+
+.hide {
+  display: none;
 }
