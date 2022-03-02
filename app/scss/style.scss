@@ -445,6 +445,7 @@
   &__info {
     &-filter{
       display: flex;
+      margin-bottom: 40px;
     }
     
     &-title {
@@ -465,6 +466,8 @@
       &+&{
         margin-left: 74px;
       }
+      
+      
     }
   }
 }

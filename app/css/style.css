@@ -1255,6 +1255,7 @@ button.swiper-pagination-bullet {
 
 .services__info-filter {
   display: flex;
+  margin-bottom: 40px;
 }
 
 .services__info-title {
